@@ -1,4 +1,4 @@
-# <div align="center">📸 CalorieCam</div>
+# <div align="center"> CalorieCam</div>
 
 <div align="center">
 
@@ -68,6 +68,10 @@ Built using **Gemini AI + Vite + JavaScript** with a modern glassmorphism UI.
 ### 📊 Nutrition Result
 
 ![Result](./screenshots/result.png)
+
+### 📱 Mobile View
+
+![Mobile View](./screenshots/mobile.png)
 
 ---
 
