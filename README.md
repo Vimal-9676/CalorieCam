@@ -8,7 +8,7 @@
 
 <br><br>
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-39FF88?style=for-the-badge&logo=vercel&logoColor=black)](calorie-cam-three.vercel.app)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-39FF88?style=for-the-badge&logo=vercel&logoColor=black)](https://calorie-cam-three.vercel.app)
 
 </div>
 
