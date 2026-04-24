@@ -1,0 +1,109 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>CalorieCam</title>
+
+  <!-- Modern Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <script type="module" src="/src/main.js"></script>
+</head>
+
+<body>
+
+<div id="app">
+
+<header class="hero">
+  <div class="overlay"></div>
+
+  <div class="hero-content">
+
+    <h1 class="logo">
+      <span class="calorie">Calorie</span><span class="cam">Cam</span>
+    </h1>
+
+    <p class="tagline">
+      AI Powered Meal Nutrition Scanner
+    </p>
+
+  </div>
+</header>
+
+<main class="container">
+
+<section class="upload-section">
+
+<h2>Upload Your Meal</h2>
+
+<label class="upload-box">
+  <input type="file" id="fileInput" accept="image/*" capture="environment">
+  <span>📷 Camera / Gallery</span>
+</label>
+
+<img id="preview" alt="Preview">
+
+<button id="analyzeBtn">Analyze Meal</button>
+
+<p id="statusMsg"></p>
+
+</section>
+
+<section id="loader" class="loader">
+  <div class="spinner"></div>
+  <p>AI is analyzing meal...</p>
+</section>
+
+<section id="resultBox" class="results">
+
+<h2>Nutrition Report</h2>
+
+<div class="meal-name" id="mealName"></div>
+
+<div class="grid">
+
+<div class="card">
+<h3>Calories</h3>
+<p id="calories"></p>
+</div>
+
+<div class="card">
+<h3>Protein</h3>
+<p id="protein"></p>
+</div>
+
+<div class="card">
+<h3>Carbs</h3>
+<p id="carbs"></p>
+</div>
+
+<div class="card">
+<h3>Fat</h3>
+<p id="fat"></p>
+</div>
+
+</div>
+
+<div class="suggestion">
+<h3>🤖 AI Suggestion</h3>
+<p id="suggestionText"></p>
+</div>
+
+</section>
+
+</main>
+
+<footer>
+<p>&copy; 2026 CalorieCam. All rights reserved.</p>
+</footer>
+
+</div>
+
+</body>
+</html>

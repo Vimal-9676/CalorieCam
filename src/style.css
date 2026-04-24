@@ -1,0 +1,543 @@
+/* src/style.css */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Outfit',sans-serif;
+}
+
+body{
+  min-height:100vh;
+  color:#fff;
+
+  background:
+  linear-gradient(rgba(0,0,0,0.58),rgba(0,0,0,0.72)),
+  url("/food-bg.png");
+
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+}
+
+.hero{
+  position:relative;
+  text-align:center;
+  padding:70px 20px 45px;
+}
+.hero-content{
+  position:relative;
+  z-index:2;
+}
+
+.logo{
+  font-size:72px;
+  font-weight:800;
+  letter-spacing:-2px;
+  line-height:1;
+}
+
+.calorie{
+  color:#39ff88;   /* single color as asked */
+}
+
+.cam{
+  color:#ffffff;
+}
+
+.tagline{
+  margin-top:18px;
+  display:inline-block;
+  padding:14px 32px;
+  border-radius:999px;
+
+  background:rgba(0, 0, 0, 0.12);
+  border:1px solid rgba(255,255,255,0.18);
+
+  font-size:20px;
+  font-weight:700;
+  color:#ffffff;              /* bright visible text */
+
+  letter-spacing:0.3px;
+
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+
+  box-shadow:
+  0 8px 25px rgba(0,0,0,0.28),
+  inset 0 1px 0 rgba(255,255,255,0.08);
+}
+
+.hero h1{
+  font-size:48px;
+  color:#0e6c31;
+}
+
+.hero p{
+  margin-top:10px;
+  font-size:18px;
+  color:#444;
+}
+
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:20px;
+}
+
+.upload-section,
+.results{
+  background:#fff;
+  padding:35px;
+  border-radius:24px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.08);
+  margin-bottom:30px;
+}
+
+.upload-section h2,
+.results h2{
+  margin-bottom:20px;
+  color:#0e6c31;
+}
+
+.upload-box{
+  display:block;
+  padding:35px;
+  border:2px dashed #2ea94f;
+  border-radius:18px;
+  text-align:center;
+  background:#f7fff8;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.upload-box:hover{
+  background:#edffef;
+}
+
+.upload-box input{
+  display:none;
+}
+
+.upload-box span{
+  font-size:18px;
+  font-weight:600;
+  color:#0e6c31;
+}
+
+#preview{
+  width:100%;
+  max-height:360px;
+  object-fit:cover;
+  border-radius:18px;
+  margin-top:20px;
+  display:none;
+}
+
+button{
+  width:100%;
+  margin-top:20px;
+  padding:16px;
+  border:none;
+  border-radius:14px;
+  background:#2ea94f;
+  color:#fff;
+  font-size:18px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+button:hover{
+  background:#24893f;
+}
+
+button:disabled{
+  background:#888;
+  cursor:not-allowed;
+}
+
+#statusMsg{
+  text-align:center;
+  margin-top:15px;
+  font-weight:600;
+  color:#0e6c31;
+}
+
+.loader{
+  display:none;
+  text-align:center;
+  padding:30px;
+}
+
+.spinner{
+  width:65px;
+  height:65px;
+  border:7px solid #ddd;
+  border-top:7px solid #2ea94f;
+  border-radius:50%;
+  animation:spin 1s linear infinite;
+  margin:auto;
+}
+
+@keyframes spin{
+  100%{
+    transform:rotate(360deg);
+  }
+}
+
+.results{
+  display:none;
+}
+
+.meal-name{
+  font-size:28px;
+  font-weight:bold;
+  color:#0e6c31;
+  margin-bottom:25px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:#f7fff8;
+  padding:25px;
+  border-left:6px solid #2ea94f;
+  border-radius:16px;
+}
+
+.card h3{
+  margin-bottom:10px;
+  color:#0e6c31;
+}
+
+.card p{
+  font-size:26px;
+  font-weight:bold;
+}
+
+.suggestion{
+  margin-top:30px;
+  background:#effff2;
+  padding:25px;
+  border-radius:18px;
+}
+
+.suggestion h3{
+  margin-bottom:10px;
+  color:#0e6c31;
+}
+
+.suggestion p{
+  line-height:1.6;
+  font-size:17px;
+}
+
+footer{
+  text-align:center;
+  padding:25px;
+  color:#555;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+  font-size:36px;
+}
+
+.upload-section,
+.results{
+  padding:20px;
+}
+
+.card p{
+  font-size:22px;
+}
+
+}
+/* src/style.css */
+/* OLD upload-section, results, container, cards ko replace karo */
+
+/* ===============================
+   MAIN CONTAINER
+================================= */
+
+.container{
+  max-width:1280px;
+  margin:auto;
+  padding:20px;
+}
+
+/* ===============================
+   GLASS PANELS
+================================= */
+
+.upload-section,
+.results{
+  background:rgba(8,12,18,0.72);
+  border:1px solid rgba(255,255,255,0.08);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+
+  padding:34px;
+  border-radius:26px;
+
+  box-shadow:
+  0 20px 50px rgba(0,0,0,0.28),
+  inset 0 1px 0 rgba(255,255,255,0.06);
+
+  margin-bottom:28px;
+}
+
+.upload-section h2,
+.results h2{
+  font-size:34px;
+  color:#ffffff;
+  margin-bottom:20px;
+  font-weight:700;
+}
+
+/* ===============================
+   UPLOAD BOX
+================================= */
+
+.upload-box{
+  display:block;
+  padding:45px 25px;
+  border-radius:22px;
+  text-align:center;
+  cursor:pointer;
+
+  border:2px dashed rgba(57,255,136,0.55);
+
+  background:rgba(255,255,255,0.03);
+
+  transition:0.3s ease;
+}
+
+.upload-box:hover{
+  transform:translateY(-2px);
+  border-color:#39ff88;
+  background:rgba(57,255,136,0.06);
+}
+
+.upload-box span{
+  font-size:20px;
+  font-weight:600;
+  color:#ffffff;
+}
+
+/* ===============================
+   BUTTON
+================================= */
+
+button{
+  width:100%;
+  margin-top:22px;
+  padding:16px;
+
+  border:none;
+  border-radius:18px;
+
+  font-size:18px;
+  font-weight:700;
+  color:#fff;
+  cursor:pointer;
+
+  background:linear-gradient(135deg,#39ff88,#11c96a);
+
+  box-shadow:0 10px 25px rgba(57,255,136,0.25);
+
+  transition:0.3s;
+}
+
+button:hover{
+  transform:translateY(-2px);
+  box-shadow:0 16px 35px rgba(57,255,136,0.35);
+}
+
+button:disabled{
+  background:#5f5f5f;
+  box-shadow:none;
+}
+
+/* ===============================
+   RESULT CARDS
+================================= */
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:18px;
+}
+
+.card{
+  padding:24px;
+  border-radius:22px;
+
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(255,255,255,0.07);
+
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-4px);
+  border-color:rgba(57,255,136,0.4);
+}
+
+.card h3{
+  font-size:18px;
+  color:#cfcfcf;
+  margin-bottom:12px;
+}
+
+.card p{
+  font-size:34px;
+  font-weight:800;
+  color:#39ff88;
+}
+
+/* src/style.css */
+/* Remaining styles add karo bottom me */
+
+/* ===============================
+   IMAGE PREVIEW
+================================= */
+
+#preview{
+  width:100%;
+  max-height:420px;
+  object-fit:cover;
+  border-radius:22px;
+  margin-top:22px;
+  display:none;
+
+  border:1px solid rgba(255,255,255,0.08);
+}
+
+/* ===============================
+   STATUS
+================================= */
+
+#statusMsg{
+  text-align:center;
+  margin-top:16px;
+  font-size:15px;
+  font-weight:600;
+  color:#bfffd8;
+}
+
+/* ===============================
+   LOADER
+================================= */
+
+.loader{
+  display:none;
+  text-align:center;
+  padding:30px;
+}
+
+.spinner{
+  width:72px;
+  height:72px;
+  border:6px solid rgba(255,255,255,0.14);
+  border-top:6px solid #39ff88;
+  border-radius:50%;
+  margin:auto;
+
+  animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+  100%{
+    transform:rotate(360deg);
+  }
+}
+
+.loader p{
+  margin-top:16px;
+  color:#ffffff;
+  font-weight:600;
+}
+
+/* ===============================
+   RESULTS
+================================= */
+
+.results{
+  display:none;
+}
+
+.meal-name{
+  font-size:34px;
+  font-weight:800;
+  color:#39ff88;
+  margin-bottom:22px;
+}
+
+.suggestion{
+  margin-top:24px;
+  padding:24px;
+  border-radius:22px;
+
+  background:rgba(57,255,136,0.06);
+  border:1px solid rgba(57,255,136,0.18);
+}
+
+.suggestion h3{
+  font-size:22px;
+  margin-bottom:12px;
+  color:#ffffff;
+}
+
+.suggestion p{
+  font-size:17px;
+  line-height:1.8;
+  color:#d9d9d9;
+}
+
+/* ===============================
+   FOOTER
+================================= */
+
+footer{
+  text-align:center;
+  padding:30px 20px;
+  color:rgba(255,255,255,0.7);
+  font-size:15px;
+}
+
+/* ===============================
+   MOBILE
+================================= */
+
+@media(max-width:768px){
+
+.logo{
+  font-size:48px;
+}
+
+
+.upload-section,
+.results{
+  padding:22px;
+}
+
+.upload-section h2,
+.results h2{
+  font-size:26px;
+}
+
+.card p{
+  font-size:28px;
+}
+
+.meal-name{
+  font-size:28px;
+}
+
+}
